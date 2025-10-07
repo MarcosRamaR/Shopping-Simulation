@@ -1,6 +1,11 @@
+import { useContext} from "react"
+import { CartContext } from "../context/CartContext"
 
 
 export const CartScreen = () => {
+
+  const {listItems, increaseAmount, decreaseAmount, deleteItems} = useContext(CartContext)
+
   return (
     <>
     <table className="table table-dark table-striped">
@@ -13,12 +18,15 @@ export const CartScreen = () => {
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <th scope="row"></th>
-          <td>Mark</td>
-          <td>Otto</td>
-          <td>@mdo</td>
-        </tr>
+        {listItems.map(item =>(
+          <tr key={item.id}>
+            <th> {item.title}</th>
+            <td>{item.price}</td>
+            <td>1</td>
+            <td><button type="button" className="btn btn-danger" onClick={() => deleteItems(item.id)}>Delete</button></td>
+          </tr>
+        ))}
+
       </tbody>
     </table>
     <div>

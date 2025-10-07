@@ -3,11 +3,14 @@ import { NavBar } from "./components/NavBar"
 import { ShopScreen } from "./pages/ShopScreen"
 import { CartScreen } from "./pages/CartScreen"
 import { Navigate } from "react-router-dom"
+import { ProductsProvider } from "./context/ProductsProvider"
+import { CartProvider } from "./context/CartProvider"
 
 
 export const ShoppingApp = () => {
   return (
-    <>
+    <ProductsProvider>
+      <CartProvider>
         <NavBar></NavBar>
         <div className="container">
             <Routes>
@@ -16,6 +19,7 @@ export const ShoppingApp = () => {
                 <Route path="/*" element = {<Navigate to='/' />}></Route>
             </Routes>
         </div>
-    </>
+      </CartProvider>
+    </ProductsProvider>
   )
 }

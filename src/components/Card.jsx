@@ -1,14 +1,16 @@
 import { useState } from "react"
 import "../styles/cardStyle.css"
 
-export const Card = ({image, title, description, price}) => {
+export const Card = ({image, title, description, price, handleAdd, handleDelete ,handleDecrease, handleIncrease}) => {
     const [added, setAdded] = useState(false)
 
     const clickDelete = () =>{
+        handleDelete()
         setAdded(false)
     }
 
     const clickAdd = () => {
+        handleAdd()
         setAdded(true)
     }
   return (
