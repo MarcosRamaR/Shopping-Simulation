@@ -2,6 +2,9 @@
 
 export const ShoppingApp = () => {
   return (
-    <div>ShoppingApp</div>
+    <div>
+        <h1>Shopping application</h1>
+        <hr/>
+    </div>
   )
 }
