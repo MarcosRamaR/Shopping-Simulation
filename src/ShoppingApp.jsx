@@ -1,10 +1,16 @@
+import { Routes, Route } from "react-router-dom"
+import { NavBar } from "./components/NavBar"
 
 
 export const ShoppingApp = () => {
   return (
-    <div>
-        <h1>Shopping application</h1>
-        <hr/>
-    </div>
+    <>
+        <NavBar></NavBar>
+        <Routes>
+{/*             <Route path="/" element={}></Route>
+            <Route path="/cart" element={}></Route>
+            <Route path="/*" element = {<Navigate to='/'/>}></Route> */}
+        </Routes>
+    </>
   )
 }
