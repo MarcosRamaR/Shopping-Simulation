@@ -21,7 +21,7 @@ export const NavBar = () => {
             <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                 <li className="nav-item">
-                    <NavLink to='/shop' className="nav-link active" aria-current="page" href="#">Compras</NavLink>
+                    <NavLink to='/shop' className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>Compras</NavLink>
                 </li>
             </ul>
             <NavLink to='/cart'>
