@@ -1,18 +1,9 @@
-import { useState } from "react"
+
 import "../styles/cardStyle.css"
 
-export const Card = ({image, title, description, price, handleAdd, handleDelete}) => {
-    const [added, setAdded] = useState(false)
+export const Card = ({image, title, description, price, handleAdd, handleDelete, isAdded}) => {
+    
 
-    const clickDelete = () =>{
-        handleDelete()
-        setAdded(false)
-    }
-
-    const clickAdd = () => {
-        handleAdd()
-        setAdded(true)
-    }
   return (
     <div className="productCard">
         <img src={image} alt={title} className="card-image" />
@@ -20,9 +11,9 @@ export const Card = ({image, title, description, price, handleAdd, handleDelete}
             <h3 className="card-title">{title}</h3>
             <p className="card-description">{description}</p>
             <p className="card-price">{price}</p>
-            {added
-                ? <button type="button" className="button-delete" onClick={clickDelete} > Delete</button>
-                :<button type="button" className="button-add" onClick={clickAdd} >Add</button>
+            {isAdded
+                ? <button type="button" className="button-delete" onClick={handleDelete} > Delete</button>
+                :<button type="button" className="button-add" onClick={handleAdd} >Add</button>
             }
         </div>
     </div>

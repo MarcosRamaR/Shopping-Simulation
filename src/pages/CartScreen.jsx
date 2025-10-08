@@ -11,7 +11,7 @@ export const CartScreen = () => {
   }
 
   const handlePayment = () => {
-    if (listItems.length > 0) print()
+    print()
   }
 
   return (
@@ -49,7 +49,7 @@ export const CartScreen = () => {
       </tfoot>
     </table>
     <div>
-      <button className="btn btn-primary" onClick={handlePayment}>Continue to payment</button>
+      <button className="btn btn-primary" onClick={handlePayment} disabled={listItems < 1}>Continue to payment</button>
     </div>
     </>
   )
