@@ -1,5 +1,6 @@
 import { useContext} from "react"
 import { CartContext } from "../context/CartContext"
+import "../styles/cartScreen.css"
 
 
 export const CartScreen = () => {
@@ -10,12 +11,12 @@ export const CartScreen = () => {
   }
 
   const handlePayment = () => {
-    print()
+    if (listItems.length > 0) print()
   }
 
   return (
     <>
-    <table className="table table-striped">
+    <table className="table table-striped table-fixed">
       <thead>
         <tr>
           <th scope="col">Name</th>

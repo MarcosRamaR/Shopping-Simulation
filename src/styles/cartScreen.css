@@ -1,0 +1,11 @@
+
+.table-fixed {
+  table-layout: fixed;
+  width: 100%;
+}
+
+.table-fixed th:nth-child(1) { width: 55%; } 
+.table-fixed th:nth-child(2) { width: 15%; } 
+.table-fixed th:nth-child(3) { width: 15%; } 
+.table-fixed th:nth-child(4) { width: 15%; } 
+
