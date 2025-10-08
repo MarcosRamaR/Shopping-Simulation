@@ -9,6 +9,10 @@ export const CartScreen = () => {
     return listItems.reduce((total, item) => total + (item.price * item.amount),0).toFixed(2)
   }
 
+  const handlePayment = () => {
+    print()
+  }
+
   return (
     <>
     <table className="table table-striped">
@@ -44,7 +48,7 @@ export const CartScreen = () => {
       </tfoot>
     </table>
     <div>
-      <button className="btn btn-primary">Continue to payment</button>
+      <button className="btn btn-primary" onClick={handlePayment}>Continue to payment</button>
     </div>
     </>
   )

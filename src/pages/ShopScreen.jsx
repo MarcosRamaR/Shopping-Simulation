@@ -6,7 +6,7 @@ import { CartContext } from "../context/CartContext"
 export const ShopScreen = () => {
 
     const {products} = useContext(ProductsContext)
-    const {listItems, addItems, increaseAmount, decreaseAmount, deleteItems} = useContext(CartContext)
+    const {addItems, deleteItems} = useContext(CartContext)
     
     const handleAdd = (items) => {
       addItems(items)
@@ -14,13 +14,6 @@ export const ShopScreen = () => {
     const handleDelete = (id) => {
       deleteItems(id)
     }
-    const handleIncrease = (id) => {
-
-    }
-    const handleDecrease = (id) => {
-
-    }
-
   return (
    <>
    <h1> Buy now</h1>
