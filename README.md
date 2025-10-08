@@ -1,16 +1,43 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Index
 
-Currently, two official plugins are available:
+* [Description](#description)
+* [Funcionalities](#functionalities)
+* [Acceso al proyecto](#access-to-the-project)
+* [Used Technologies](#used-technologies)
+* [React and Vite](#react-and-vite)
+* [Developers](#developers)
+* [License](#license)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## React Compiler
+## Description
+A React-based marketplace simulation website.
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+## Functionalities
+- `Add and delete `: Allows add and delete products from the shopping cart.
+- `Increase and Decrease`: Allow increase and decrease the quantity of a product already in the shopping cart.
+- `Total to pay`: Calculate and show the total amount to pay in real time.
 
-## Expanding the ESLint configuration
+## Access to the project
+To access the website, you can use this link: https://sim-marketplace-react.netlify.app/home </br>
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Used Technologies
+  * JavaScript</br>
+  * React</br>
+  * Vite</br>
+  * HTML</br>
+  * CSS</br>
+
+## React and Vite
+This application uses **React** together with **Vite** for bundling and Hot Module Replacement (HMR).
+
+## Developers
+
+<div align= "center">Marcos Rama </div>
+<div align= "center">Email: marcos.rama.1994@gmail.com</div>
+
+## License
+
+<div align="center">
+This project is open source and free to use. 
+</div>
