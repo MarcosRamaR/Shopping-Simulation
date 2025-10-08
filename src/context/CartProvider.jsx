@@ -8,11 +8,17 @@ const shopReducer = (state = initialState, action={}) =>{
         case '[CART] Add Items':
             return [...state,action.payload]
         case '[CART] Increase Amount':
-            
-        break
+            return state.map(item => {
+                const cant = item.amount + 1
+                if(item.id === action.payload) return {...item,amount:cant}
+                return item
+            })
         case '[CART] Decrease Amount':
-
-        break
+            return state.map(item => {
+                const cant = item.amount - 1
+                if((item.id === action.payload) && item.amount > 1) return {...item,amount:cant}
+                return item
+            })
         case '[CART] Delete Items':
             console.log("Delete button")
             return  state.filter(items => items.id !== action.payload)
@@ -26,6 +32,7 @@ export const CartProvider = ({children}) => {
     const [listItems, dispatch] = useReducer(shopReducer, initialState)
 
     const addItems = (items) => {
+        items.amount = 1
         const action = {
             type: '[CART] Add Items',
             payload: items
