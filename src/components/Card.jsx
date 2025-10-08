@@ -11,10 +11,13 @@ export const Card = ({image, title, description, price, handleAdd, handleDelete,
             <h3 className="card-title">{title}</h3>
             <p className="card-description">{description}</p>
             <p className="card-price">{price}</p>
+            <div className="button-container">
             {isAdded
                 ? <button type="button" className="button-delete" onClick={handleDelete} > Delete</button>
                 :<button type="button" className="button-add" onClick={handleAdd} >Add</button>
             }
+            </div>
+
         </div>
     </div>
   )

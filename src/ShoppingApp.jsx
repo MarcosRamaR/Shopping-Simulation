@@ -5,6 +5,7 @@ import { CartScreen } from "./pages/CartScreen"
 import { Navigate } from "react-router-dom"
 import { ProductsProvider } from "./context/ProductsProvider"
 import { CartProvider } from "./context/CartProvider"
+import {HomeScreen} from "./pages/HomeScreen"
 
 
 export const ShoppingApp = () => {
@@ -14,9 +15,10 @@ export const ShoppingApp = () => {
         <NavBar></NavBar>
         <div className="container">
             <Routes>
-                <Route path="/" element={<ShopScreen></ShopScreen>}></Route>
+                <Route path="/home" element={<HomeScreen></HomeScreen>}></Route>
+                <Route path="/shop" element={<ShopScreen></ShopScreen>}></Route>
                 <Route path="/cart" element={<CartScreen></CartScreen>}></Route>
-                <Route path="/*" element = {<Navigate to='/' />}></Route>
+                <Route path="/*" element = {<Navigate to='/home' />}></Route>
             </Routes>
         </div>
       </CartProvider>

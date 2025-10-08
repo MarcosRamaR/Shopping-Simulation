@@ -1,67 +1,105 @@
-/* Estilos para la tarjeta */
+
 .productCard {
-    display: flex;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    padding: 10px;
-    margin-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 15px;
+  margin-bottom: 15px;
+  background-color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.productCard:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.card-image {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-right: 15px;
+}
+
+.card-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-title {
+  margin: 0 0 5px 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.card-description {
+  margin: 0 0 10px 0;
+  font-size: 0.95rem;
+  color: #666;
+}
+
+.card-price {
+  margin: 0 0 10px 0;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #111;
+}
+
+.button-container {
+  display: flex;
+  gap: 10px; 
+  flex-wrap: wrap; 
+}
+
+.button-add, .button-delete {
+  padding: 5px 12px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.button-add {
+  background-color: #4caf50;
+  color: #fff;
+}
+
+.button-add:hover {
+  background-color: #43a047;
+  transform: translateY(-2px);
+  box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+}
+
+.button-delete {
+  background-color: #e53935;
+  color: #fff;
+}
+
+.button-delete:hover {
+  background-color: #d32f2f;
+  transform: translateY(-2px);
+  box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  .productCard {
+    flex-direction: column;
+    align-items: flex-start;
   }
-  
   .card-image {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    border-radius: 4px;
-    margin-right: 10px;
-  }
-  
-  .card-content {
-    flex: 1;
-  }
-  
-  .card-title {
-    margin: 0;
-  }
-  
-  .card-description {
-    margin: 0;
+    margin-right: 0;
     margin-bottom: 10px;
+    width: 100%;
+    height: auto;
   }
-  
-  .card-price {
-    margin: 0;
-    font-weight: bold;
-  }
-  
-  .button-add {
-    background-color: #4caf50;
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .button-add:hover {
-    background-color: #45a049;
-  }
-  .button-delete {
-    background-color: #af4c4c;
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .button-delete:hover {
-    background-color: #a04545;
-  }
-  
-  /* Estilos para el carrito */
-  .cart {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-  
+}
