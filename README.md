@@ -19,7 +19,7 @@ A React-based marketplace simulation website.
 - `Total to pay`: Calculate and show the total amount to pay in real time.
 
 ## Access to the project
-To access the website, you can use this link: https://sim-marketplace-react.netlify.app/home </br>
+To access the website, you can use this link: https://sim-marketplace-react.netlify.app </br>
 
 ## Used Technologies
   * JavaScript</br>
